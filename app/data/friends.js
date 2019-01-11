@@ -10,7 +10,7 @@ var friendsArray = [
           5,
           3,
           1,
-          1,
+          2,
           3,
           5
       ]
@@ -19,7 +19,7 @@ var friendsArray = [
       friendName: "Pat",
       friendImg: "https://lastditchcritic.files.wordpress.com/2015/09/its-pat.jpg",
       scores: [
-          3,
+          1,
           1,
           1,
           1,
@@ -37,8 +37,8 @@ var friendsArray = [
         scores: [
             3,
             1,
-            5,
-            1,
+            3,
+            3,
             2,
             3,
             3,
@@ -50,17 +50,17 @@ var friendsArray = [
 
       {
         friendName: "Darcy",
-        friendImg: "",
+        friendImg: "https://pbs.twimg.com/profile_images/817081136765497344/uFDmeOyA_400x400.jpg",
         scores: [
-            3,
             1,
-            1,
-            1,
-            2,
             5,
+            5,
+            5,
+            2,
+            1,
             4,
             5,
-            3,
+            1,
             3
         ]
       },
@@ -71,8 +71,8 @@ var friendsArray = [
         scores: [
             1,
             4,
-            5,
-            3,
+            1,
+            1,
             3,
             3,
             4,
@@ -81,17 +81,18 @@ var friendsArray = [
             1
         ]
       },
+      
 
     {
         friendName: "Phillip",
       friendImg: "https://usatbroncoswire.files.wordpress.com/2018/11/lindsay-hair1.jpg?w=1000&h=600&crop=1",
       scores: [
+          2,
           5,
-          5,
-          5,
+          1,
           5,
           4,
-          4,
+          3,
           4,
           4,
           1,
