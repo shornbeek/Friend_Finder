@@ -27,19 +27,27 @@
 					<label for="userName">Your Name (Required)</label>
 					<input type="text" class="form-control" id="friendName" placeholder="Enter Your Name">
 				</div>
-				<!-- <div class="form-group">
+				 <!-- <div class="form-group">
 					<label for="exampleInputPassword1">Link to Photo Image (Required)</label>
-					<input type="password" class="form-control" id="exampleInputPassword1 friendImg">
-				</div> -->
-				<div class="input-group mb-3">
+					<input type="text" class="form-control" id="exampleInputPassword1 friendImg">
+                </div> -->
+
+              
+        <label for="userImg">Your Image (Required)</label>
+
+        <input type="text" name="" id="friendImg" class="form-control" placeholder="Enter Image Link" required>
+                
+                
+				<!-- <div class="input-group mb-3">
 					<div class="custom-file">
-						<input type="file" class="custom-file-input" id="inputGroupFile02 ">
+						<input type="text" class="custom-file-input" id="inputGroupFile02 ">
 						<label class="custom-file-label" for="inputGroupFile02">Choose file</label>
 					</div>
 					<div class="input-group-append">
 						<span class="input-group-text" id="friendImg">Upload</span>
 					</div>
-				</div>
+                </div>  -->
+                
 				<hr>
 				<br>
 				<div class="form-group">
@@ -175,7 +183,7 @@
 				</button>
 				</div>
 				<div class="modal-body">
-					<h4>Your new friend's name is: <span id="bestName"></span></h4>
+					<h4>Your new friend is: <span id="bestName"></span></h4>
 					<img id="bestImg">
 					<!-- <p>Modal body text goes here.</p> -->
 				</div>
@@ -193,9 +201,8 @@
 	$(".submit").on("click", function(event) {
 		//prevent it from erasing data before it is captured
 		event.preventDefault();
-		alert("Thank you for submitting to the FriendFinder Survey");
-		// Here we grab the form elements
-		//the question values are returning undefined
+		
+		
 		var newFriend = {
 	        newName: $("#friendName").val().trim(),
 	        newImg: $("#friendImg").val().trim(),
@@ -212,17 +219,11 @@
 	        	$("#question10").val()
 	        ]
     };
-    //log newFriend captured from form
-    //console.log(newFriend);
-    //console.log(newFriend.newName);
-    //this is what I need to do the friend match up
-    //console.log(newFriend.scores);
-    //console.log(newFriend[0].score);
+  
     $.post("/api/friends", newFriend,
         function(data) {
 	        // If a best friend match is found
 	        if (data) {
-	            //alert("Yay! You are part of the FriendFinder Network, please wait for your best friend match!");
 	            $('#bestName').text(data.name);
           		$('#bestImg').attr("src", data.img).addClass("img-fluid");
 	            //show modal with best friend match
@@ -233,7 +234,7 @@
           	}
           	// ?
           	else {
-            	alert("Sorry we are having problems, please try again");
+            	alert("Sorry use someone elses friend finder");
           	}
 			// Clear the form when submitting
 			$("#friendName").val("");
