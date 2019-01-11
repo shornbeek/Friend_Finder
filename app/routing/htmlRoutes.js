@@ -16,13 +16,13 @@ module.exports = function(app) {
     // ---------------------------------------------------------------------------
   
     app.get("/", function(req, res) {
-      res.sendFile(path.join(__dirname, "/../public/home.html"));
-      console.log("his hhhh");
+      res.sendFile(path.join(__dirname,  "../public/home.html"));
+      console.log("this home page right is the start of lasting friendship");
     });
   
     app.get("/survey", function(req, res) {
-      res.sendFile(path.join(__dirname, "/../public/survey.html"));
-      console.log("his ss");
+      res.sendFile(path.join(__dirname,  "../public/survey.html"));
+      console.log("now lets get technical and answer some questions.");
     });
     
   
