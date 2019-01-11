@@ -1,18 +1,18 @@
-var friendsArr = [
+var friendsArray = [
     {
       friendName: "Rick",
       friendImg: "https://assets.vg247.com/current//2017/04/rick_and_morty_3.jpg",
       scores: [
           1,
+          3,
           1,
           1,
+          5,
+          3,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1
+          3,
+          5
       ]
     },
     {
@@ -101,4 +101,4 @@ var friendsArr = [
   ];
   
 //saved friends in friends array:) Now we have some friends 
-  module.exports = friendsArr;
+  module.exports = friendsArray;
